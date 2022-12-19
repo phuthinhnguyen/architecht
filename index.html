@@ -20,6 +20,8 @@
             overflow: hidden;
             background-color: white;
             padding: 10px;
+            box-shadow: 2px 2px 8px lightgray;
+            z-index: 1;
         }
         .menu a{
             display: inline-block;
@@ -40,8 +42,8 @@
         .img{
             position: relative;
             z-index: -1;
-            max-width: 100%;
-            margin: 0 200px;
+            max-width: 1500px;
+            margin: auto;
           
         }
         .img img{
@@ -67,48 +69,75 @@
         .img-text p{
             display: inline-block;
             color: white;
-          font-size: 50px;
+            font-size: 50px;
+        }
+        @media only screen and (max-width:700px){
+            .img-text h2{
+            transform: translate(100%,-40%);
+        }
+            .img-text p{
+            transform: translate(-30%,50%);
+        }
+        }
+        @media only screen and (max-width:650px){
+            .img-text h2{
+                margin: auto;
+                transform: translate(0%,0%);
+        }
+            .img-text p{
+                display: none;
+        }
         }
         .project{
-            margin: 10px 200px;
-            max-width: 100%;
+           max-width: 1500px;
+           margin: auto;
+           padding: 25px;
         }
         .project-text{
-            font-family: 'Courier New', Courier, monospace;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 30px;
             text-align: left;
-            margin-top: 30px
+            margin-top: 30px;
         }
         .project-items{
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            column-gap: 5px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            
+        }
+        @media only screen and (max-width:1200px){
+            .project-items{
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 10px;  
+        }  
+        }
+        @media only screen and (max-width:600px){
+            .project-items{
+                grid-template-columns: auto;
+        }
+
         }
         .project-items img{
             height: auto;
             width: 100%;
-
+            z-index: -1;
         }
-        .project-items-img{
-            position: relative;
-            width: 25%;
-            float: left;
-        }
-        .project-items-img p{
+        .project-items-img a{
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
+            padding: 10px;
             background-color: black;
             color: white; 
+            z-index: 0;
         }
         .about{
-            max-width: 100%;
-            margin: 10px 200px;
+            max-width: 1500px;
+            margin: auto;
+            padding: 25px;
         }
         .about-text1{
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 30px;
             text-align: left;
         }
@@ -121,37 +150,67 @@
             align-items: center;
             column-gap: 10px;
         }
+        .about-item1 p{
+            margin-left: 10px;
+        }
+        .about-item1 div+p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+       
+        @media only screen and (max-width:1200px){
+            .about-items{
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 10px;
+      
+            
+        }  
+        }
+        @media only screen and (max-width:600px){
+            .about-items{
+                grid-template-columns: auto;
+        }
+
+        }
+
         .about-item1 img{
             height: auto;
             width: 100%;
+            padding: 10px;
         }
-        .about-item1{
-            width: 25%;
-        }
+       
         .about-items a{
             display: block;
             color: black;
-            background-color: azure;
+            background-color: lightblue;
             text-align: center;
             text-decoration: none;
             padding: 10px;
+        }
+        .about-items a:hover{
+        
+            background-color: lightseagreen;
+         
         }
         .about hr{
             width: 99%;
         }
         .contact{
-            max-width: 100%;
-            margin: 10px 200px;
+            max-width: 1500px;
+            margin: auto;
+            padding: 25px;
             
         }
         .contact-text1{
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 30px;
             text-align: left;
         }
         .contact-text2{
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
             text-align: left;
            
         }
@@ -166,12 +225,15 @@
             color: white;
             background-color: black;
             padding: 12px;
-            margin-top: 40px;
-            
+            margin-top: 40px;   
+        }
+        .contact a:hover{
+            opacity: 0.8;
         }
         .map{
-            max-width: 100%;
-            margin: 10px 200px;
+            max-width: 1500px;
+            margin: auto;
+            padding: 5px 25px;
         }
         .map img{
             width: 100%;
@@ -218,36 +280,36 @@
         <hr>
         <div class="project-items">
             <div class="project-items-img">
-                <p>Summer House</p>
+                <a>Summer House</a>
                 <img src="house5.jpg" alt="">
             </div>
             <div class="project-items-img">
-                <p>Summer House</p>
+                <a>Brick House</a>
+                <img src="house2.jpg" alt="">
+            </div>
+            <div class="project-items-img">
+                <a>Renovated</a>
+                <img src="house3.jpg" alt="">
+            </div>
+            <div class="project-items-img">
+                <a>Barn House</a>
+                <img src="house4.jpg" alt="">
+            </div>
+            <div class="project-items-img">
+                <a>Summer House</a>
+                <img src="house2.jpg" alt="">
+            </div>
+            <div class="project-items-img">
+                <a>Brick House</a>
                 <img src="house5.jpg" alt="">
             </div>
             <div class="project-items-img">
-                <p>Summer House</p>
-                <img src="house5.jpg" alt="">
+                <a>Renovated</a>
+                <img src="house4.jpg" alt="">
             </div>
             <div class="project-items-img">
-                <p>Summer House</p>
-                <img src="house5.jpg" alt="">
-            </div>
-            <div class="project-items-img">
-                <p>Summer House</p>
-                <img src="house5.jpg" alt="">
-            </div>
-            <div class="project-items-img">
-                <p>Summer House</p>
-                <img src="house5.jpg" alt="">
-            </div>
-            <div class="project-items-img">
-                <p>Summer House</p>
-                <img src="house5.jpg" alt="">
-            </div>
-            <div class="project-items-img">
-                <p>Summer House</p>
-                <img src="house5.jpg" alt="">
+                <a>Barn House</a>
+                <img src="house3.jpg" alt="">
             </div>
         </div>
     </div>
