@@ -23,7 +23,7 @@
             box-shadow: 2px 2px 8px lightgray;
             z-index: 1;
         }
-        .menu a{
+        .br, .menu-about, .menu-project, .menu-contact{
             display: inline-block;
             background-color: transparent;
             padding: 10px;
@@ -173,6 +173,9 @@
             .about-items{
                 grid-template-columns: auto;
         }
+            .menu-about, .menu-project, .menu-contact{
+                display: none;
+            }
 
         }
 
@@ -264,9 +267,9 @@
 <body>
     <div class="menu">
         <a class="br" href=""><b>BR </b>Architects</a>
-        <a href="#project">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact" >Contact</a>
+        <a class="menu-project" href="#project">Projects</a>
+        <a class="menu-about" href="#about">About</a>
+        <a class="menu-contact" href="#contact" >Contact</a>
     </div>
     <div class="img">
         <img src="architect.jpg" alt="architect">
